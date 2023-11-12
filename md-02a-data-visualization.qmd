@@ -2,8 +2,9 @@
 title: "Data Visualisation"
 author: "Bigabwamukama Lawrence"
 format:
-  html:
+  pdf:
     embed-resources: true
+    toc: true
 editor: visual
 execute:
   warning: false
@@ -140,13 +141,17 @@ gapminder_summary_continent_year <- read_rds(here::here("data/gapminder-summary-
 
 3.  Do not display (ignore) the outliers in the plot. **Note: Use a search engine or an AI tool to find the solution and add the link to the solution you have found.**
 
-4.  the link is <https://www.perplexity.ai/search/r-label-loaddata-jdZ0GD7JQiGgdST9RyvQiQ?s=c>
+    Answer
 
-5.  Run the code contained in the code chunk and fix any errors.
+    The link is <https://www.perplexity.ai/search/r-label-loaddata-jdZ0GD7JQiGgdST9RyvQiQ?s=c>
 
-6.  What are the data types of the three variables used for aesthetic mappings?
+4.  Run the code contained in the code chunk and fix any errors.
 
-7.  the three data types are type factor (continent and fill) and type numeric (lifeExp)
+5.  What are the data types of the three variables used for aesthetic mappings?
+
+    Answer
+
+    the three data types are type factor (continent and fill) and type numeric (lifeExp)
 
     ```{r}
     ggplot(data = gapminder_2007,
@@ -218,6 +223,8 @@ gapminder_summary_continent_year <- read_rds(here::here("data/gapminder-summary-
 
 4.  The plot is identical to the plot created with `geom_col()`. Why? What does the `geom_bar()` function do? Write your text here:
 
+    Answer
+
     The **`geom_bar()`** and **`geom_col()`** functions in ggplot2 are used to create bar charts. The main difference between these two functions is the default value of the **`stat`** argument. The **`geom_bar()`** function uses **`stat="count"`** by default, which means that it counts the number of occurrences of each category in the data and plots the counts as the height of the bars. On the other hand, the **`geom_col()`** function uses **`stat="identity"`** by default, which means that it uses the values in the data as the height of the bars.
 
 ## Task 9: Create a histogram
@@ -250,9 +257,13 @@ gapminder_summary_continent_year <- read_rds(here::here("data/gapminder-summary-
 
 6.  Describe how the `geom_histogram()` function is similar to the `geom_bar()` function.
 
+    Answer
+
     **`geom_histogram()`** and **`geom_bar()`** are similar in that they both create bar charts using the **`geom`** layer in ggplot2. They also both use the **`stat`**layer to calculate the counts or densities of observations in each category or bin.
 
 7.  What happens by adding the 'breaks' argument? Play around with the numbers inside of `seq()` to see what changes. Describe here what you observe:
+
+    Answer
 
     Changing the numbers inside the **`seq()`** function would change the number and position of the breaks on the x-axis.
 
@@ -264,7 +275,7 @@ gapminder_summary_continent_year <- read_rds(here::here("data/gapminder-summary-
     ggplot(data = gapminder_2007,
            mapping = aes(x = gdpPercap,
                          y = lifeExp,
-                    
+                         
                          color = continent)) +
       geom_point() +
     facet_wrap(~continent)
@@ -273,8 +284,13 @@ gapminder_summary_continent_year <- read_rds(here::here("data/gapminder-summary-
 2.  Use the `ggplot()` function and assign `gapminder_2007` and create a scatterplot using the `geom_point()`function with the following aesthetic mappings:
 
 -   gdpPercap the x-axis;
+
 -   lifeExp to the y-axis;
--   population to the size argument; this brought and error and is not included
+
+-   population to the size argument;
+
+    Note: this brought and error and is not included
+
 -   country to color using the `color = continent` argument inside `aes()`
 
 4.  Run the code contained in the code chunk and fix any errors.
@@ -291,7 +307,11 @@ gapminder_summary_continent_year <- read_rds(here::here("data/gapminder-summary-
 
 3.  Remove the '\#' sign at the line that starts with the `scale_color_manual()` function
 
-4.  What is stored in the `country_colors` object? Find out by executing the object in the Console (type it to the Console and hit enter). it shows a list of various countries and their color codes in the console.
+4.  What is stored in the `country_colors` object? Find out by executing the object in the Console (type it to the Console and hit enter).
+
+    Answer
+
+    It shows a list of various countries and their color codes for different colours in the console.
 
 5.   Do the same again, but with a question mark `?country_colors`. it shows help about the country_colors
 
